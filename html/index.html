@@ -22,6 +22,7 @@
     <div class="row px-3">
       <div class="col-12">
         <label for="ubicacion">Mis Coordenadas</label>
+      </div>
     </div>
 
     <div id="resultMyCoords" class="px-3"></div>
@@ -45,18 +46,18 @@
     <div id="map"></div>
 
     <script>
+      // mi localizacion
       navigator.geolocation.getCurrentPosition(success);
       function success(geolocationPosition) {
         let myCoords = geolocationPosition.coords;
         document.getElementById(
           "resultMyCoords"
         ).innerHTML = `<p>${myCoords.latitude}, ${myCoords.longitude}</p>`;
-
         console.log(geolocationPosition);
       }
 
       // iniciador de mapa
-      function initMap(geolocationPosition) {
+      function initMap() {
         let latitud = 19.2488203;
         let longitud = -103.7132869;
 
@@ -85,7 +86,6 @@
           document.getElementById(
             "coordsLatLng"
           ).value = `${this.getPosition().lat()}, ${this.getPosition().lng()}`;
-          map.panTo(event.getPosition);
         });
 
         // coords a direccion
@@ -121,7 +121,7 @@
 
               generarMap(coords);
 
-              let marker = new google.maps.Marker({
+              marker = new google.maps.Marker({
                 position: coordsLatLng,
                 map: map,
               });
@@ -134,7 +134,6 @@
           })
           .catch((e) => console.log(e));
       }
-
       window.initMap = initMap;
     </script>
 
