@@ -6,6 +6,8 @@ En dicha website se puede obtener lo siguiente:
 
 • Convertir coordenadas en una dirección física
 
-• Al igual se tiene el despliegue en un mapa con marcador y se puede controlar con coordenadas ingresadas a través de un input.
+• El despliegue en un mapa con marcador y se puede controlar con coordenadas ingresadas a través de un input.
+
+• Al igual que con el marcador se puede mover a diferentes puntos y obtener las coordenadas en el input.
 
 Link: https://jonathanr26.github.io/geolocalizacion/
